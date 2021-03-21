@@ -591,18 +591,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	color: #ec1f46;
 }
 
+.header .fixed-position .navbar-collapse {
+	height: calc(100% - 63px);
+	top: 61px;
+}
+
 .header .navbar-collapse {
 	position: fixed;
 	left: 0;
 	right: 0;
 	height: calc(100% - 95px);
 	overflow-y: auto;
+	overflow-x: hidden;
 	top: 93px;
-}
-
-.fixed-position .header .navbar-collapse {
-	height: calc(100% - 63px);
-	top: 61px;
 }
 
 .header .cart-holder {
@@ -1085,7 +1086,9 @@ body {
 	}
 
 	.header .navbar-collapse {
-		position: static;
+		position: static !important;
+		overflow: visible;
+		height: auto !important;
 	}
 
 	.header .login-signup-holder {

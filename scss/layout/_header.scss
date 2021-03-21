@@ -105,21 +105,28 @@
     }
   }
 
+  
+
+  .fixed-position {
+    .navbar-collapse {
+      height: calc(100% - 63px);
+      top: 61px;
+    }
+  }
+
   .navbar-collapse {
     position: fixed;
     left: 0;
     right: 0;
     height: calc(100% - 95px);
     overflow-y: auto;
+    overflow-x: hidden;
     top: 93px;
 
-    .fixed-position & {
-      height: calc(100% - 63px);
-      top: 61px;
-    }
-
     @include media-breakpoint-up(md) {
-      position: static;
+      position: static !important;
+      overflow: visible;
+      height: auto !important;
     }
   }
 
