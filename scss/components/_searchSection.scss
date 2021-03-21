@@ -3,3 +3,39 @@
   font-weight: bold;
   border-bottom: 1px solid $gray-300;
 }
+
+.search-section {
+  margin-top: -64px;
+}
+
+.search-form {
+  .search-holder {
+    @include media-breakpoint-up(md) {
+      width: calc(100% - 177px) !important;
+    }
+    .icon {
+      top: 50%;
+      left: 14px;
+      width: 16px;
+      height: auto;
+      transform: translateY(-50%);
+    }
+
+    input[type='search'],
+    input[type='text'] {
+      @include font(14px,20px);
+      border: 1px solid $gray-400;
+      color: $gray-200;
+
+      @include placeholder {
+        color: $gray-200;
+      }
+    }
+  }
+
+  .btn-holder {
+    @include media-breakpoint-up(md) {
+      width: 177px !important;
+    }
+  }
+}

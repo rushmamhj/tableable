@@ -106,10 +106,17 @@
   }
 
   .navbar-collapse {
-    position: absolute;
+    position: fixed;
     left: 0;
     right: 0;
-    top: 100%;
+    height: calc(100% - 95px);
+    overflow-y: auto;
+    top: 93px;
+
+    .fixed-position & {
+      height: calc(100% - 63px);
+      top: 61px;
+    }
 
     @include media-breakpoint-up(md) {
       position: static;
@@ -130,7 +137,7 @@
     margin: -5px 0 0;
 
     @include media-breakpoint-up(md) {
-      width: 120px;
+      width: 125px;
     }
 
     .login-signup-opener {
@@ -226,24 +233,12 @@
 }
 
 .dropdown {
-  .dropdown-menu {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 100%;
-
-    @include media-breakpoint-up(md) {
-      left: auto;
-      width: 305px;
-      display: none !important;
-    }
+  @include media-breakpoint-up(md) {
+    position: relative !important;
   }
 
-  .dropdown-toggle {
-    span {
-      transition: color .3s;
-    }
-    &:hover {
+  &:hover {
+    .dropdown-toggle {
       @include media-breakpoint-up(md) {
         .login-text {
           color: $primary !important;
@@ -254,6 +249,106 @@
           display: block !important;
         }
       }
+
     }
+  }
+
+  .dropdown-menu {
+    position: fixed;
+    left: 0;
+    right: 0;
+    height: calc(100% - 95px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    top: 93px;
+
+    .fixed-position & {
+      height: calc(100% - 63px);
+      top: 61px;
+    }
+
+    @include media-breakpoint-up(md) {
+      left: auto;
+      right: -22px;
+      width: 305px;
+      height: auto !important;
+      top: calc(100% + 15px) !important;
+      overflow: visible !important;
+      position: absolute !important;
+    }
+
+    @include media-breakpoint-up(lg) {
+      display: none !important;
+    }
+    
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: -20px;
+      height: 20px;
+      background-color: transparent;
+      z-index: 1;
+    }
+
+    &:after {
+      content: '';
+      position: absolute;
+      @include size(24px);
+      display: block;
+      transform: rotate(45deg);
+      background: $white;
+      border-radius: 4px;
+      top: -9px;
+      right: 20px;
+    }
+
+    .title {
+      @include font(14px,20px);
+    }
+
+    .total {
+      margin: 0 -10px;
+    }
+    
+    .btn-holder {
+      margin: 0 -5px;
+      padding: 10px 0 0;
+    }
+  }
+
+  .dropdown-toggle {
+    span {
+      transition: color .3s;
+    }
+    
+  }
+}
+
+.cartitem-list {
+  .img-holder {
+    width: 84px;
+  }
+
+  .text-holder {
+    width: calc(100% - 84px);
+    padding-left: 15px;
+  }
+
+  .item-title {
+    @include font(16px);
+    color: $gray-800;
+  }
+
+  .desc {
+    color: $gray-200;
+    @include font(10px);
+  }
+
+  .item-qty,
+  .item-price {
+    @include font(12px);
+    color: $gray-800;
   }
 }

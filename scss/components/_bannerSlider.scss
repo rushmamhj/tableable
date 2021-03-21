@@ -24,6 +24,10 @@
     height: 525px;
   }
 
+  .btn {
+    padding: 12px 30px;
+  }
+
   h2 {
     @include font(36px,44px);
     font-family: $font-family-serif;
