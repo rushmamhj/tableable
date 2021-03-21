@@ -1,0 +1,15 @@
+.advertisement-list {
+  .col-holder {
+    height: 90px;
+  }
+}
+
+.advertisement {
+  a {
+    transition: opacity .3s;
+    
+    &:hover{
+      opacity: 0.7;
+    }
+  }
+}

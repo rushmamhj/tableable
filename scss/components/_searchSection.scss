@@ -1,0 +1,5 @@
+.location-info {
+  @include font(14px,20px);
+  font-weight: bold;
+  border-bottom: 1px solid $gray-300;
+}

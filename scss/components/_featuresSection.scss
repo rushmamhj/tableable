@@ -1,0 +1,38 @@
+.feature-list {
+  margin-bottom: -32px;
+
+  .img-holder {
+    min-height: 140px;
+    background: $pink;
+
+    &:before {
+      content: '';
+      display: block;
+      height: 140px;
+    }
+  }
+
+  h3 {
+    @include font(18px,24px);
+  }
+
+  .col {
+    &:nth-child(4n+2) {
+      .img-holder {
+        background: $teal;
+      }
+    }
+    
+    &:nth-child(4n+3) {
+      .img-holder {
+        background: $yellow;
+      }
+    }
+    
+    &:nth-child(4n+4) {
+      .img-holder {
+        background: $purple;
+      }
+    }
+  }
+}

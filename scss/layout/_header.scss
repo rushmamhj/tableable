@@ -1,0 +1,259 @@
+.header {
+  .contact-info {
+    @include font($font-size-sm);
+    font-weight: 600;
+
+    a {
+      color: $secondary;
+
+      svg {
+        path {
+          transition: fill .3s;
+        }
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $primary;
+
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+
+    svg {
+      vertical-align: top;
+      display: inline-block;
+    }
+  }
+
+  .top-header {
+    box-shadow: 0px 4px 4px rgba(0,0,0,.6);
+    z-index: 9;
+    position: relative;
+  }
+
+  .navbar-brand {
+    width: 120px;
+    margin: 0;
+
+    @include media-breakpoint-up(lg) {
+      width: 180px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: 239px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .nav-holder {
+    width: calc(100% - 120px);
+
+    @include media-breakpoint-up(lg) {
+      width: calc(100% - 180px);
+    }
+
+    @include media-breakpoint-up(xl) {
+      width: calc(100% - 239px);
+    }
+  }
+
+  .navbar-dark {
+    .navbar-toggler {
+      border: 0;
+      padding: 0;
+
+      span {
+        width: 22px;
+        height: 22px;
+      }
+    }
+
+    .navbar-nav {
+      .nav-item {
+        &.active {
+          .nav-link {
+            color: $primary;
+          }
+        }
+      }
+      .nav-link {
+        @include font($font-size-sm,1.428);
+        color: #fff;
+        text-transform: uppercase;
+
+        @include media-breakpoint-up(md) {
+          @include font(12px,1.428);
+        }
+
+        @include media-breakpoint-up(lg) {
+          @include font($font-size-sm,1.428);
+        }
+
+        &:hover {
+          color: $primary;
+        }
+      }
+    }
+  }
+
+  .navbar-collapse {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+
+    @include media-breakpoint-up(md) {
+      position: static;
+    }
+  }
+
+  .cart-holder {
+    margin-top: -5px;
+
+    .badge {
+      border-radius: 100px;
+      right: -9px;
+      top: -4px;
+    }
+  }
+
+  .login-signup-holder {
+    margin: -5px 0 0;
+
+    @include media-breakpoint-up(md) {
+      width: 120px;
+    }
+
+    .login-signup-opener {
+      span {
+        transition: color .3s;
+      }
+
+      svg path {
+        transition: color .3s;
+      }
+      &:hover {
+        text-decoration: none;
+
+        span {          
+          color: $primary !important;
+        }
+        
+        svg path {
+          fill: $primary;
+        }
+      }
+    }
+  }
+
+  .language-selector {
+    border: 1px solid rgba(#998F8F, .36);
+    border-width: 0 0 0 1px;
+    padding-left: 12px;
+    margin-left: 12px;
+
+    @include media-breakpoint-up(md) {
+      border-width: 0 1px;
+      padding-right: 16px;
+      margin-right: 16px;
+      padding-left: 16px;
+      margin-left: 16px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 11px;
+      margin-right: 15px;
+      padding-left: 18px;
+      margin-left: 21px;
+    }
+  }
+
+  .social-icons {
+    margin: 0 0 0 -10px;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 0 -20px;
+    }
+
+    a {
+      svg {
+        path {
+          transition: fill .3s;
+        }
+      }
+      &:hover {
+        svg {
+          path {
+            fill: $primary;
+          }
+        }
+      }
+    }
+  }
+}
+
+.login-signup-holder {
+  width: 40px;
+
+  .user-icon {
+    width: 20px;
+  }
+
+  .icon {
+    width: 15px;
+  }
+}
+
+.user-icon {
+  svg {
+    fill: white;
+  }
+}
+
+.dropdown-toggle {
+  &:after {
+    content: none;
+  }
+}
+
+.dropdown {
+  .dropdown-menu {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+
+    @include media-breakpoint-up(md) {
+      left: auto;
+      width: 305px;
+      display: none !important;
+    }
+  }
+
+  .dropdown-toggle {
+    span {
+      transition: color .3s;
+    }
+    &:hover {
+      @include media-breakpoint-up(md) {
+        .login-text {
+          color: $primary !important;
+        }
+      }
+      @include media-breakpoint-up(lg) {
+        & + .dropdown-menu {
+          display: block !important;
+        }
+      }
+    }
+  }
+}
