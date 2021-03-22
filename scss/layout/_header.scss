@@ -234,6 +234,8 @@
 }
 
 .dropdown-toggle {
+  -webkit-appearance: none !important;
+  
   &:after {
     content: none;
   }
@@ -274,7 +276,6 @@
     overflow-y: auto;
     overflow-x: hidden;
     top: 93px;
-    -webkit-appearance: none;
 
     .fixed-position & {
       height: calc(100% - 63px);
