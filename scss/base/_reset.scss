@@ -142,3 +142,11 @@ img {
 text-lg {
   @include font(18px,20px);
 }
+
+.hover-primary {
+  &:hover {
+    @include media-breakpoint-up(md) {
+      color: $primary !important;
+    }
+  }
+}

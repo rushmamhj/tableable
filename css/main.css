@@ -690,6 +690,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	overflow-y: auto;
 	overflow-x: hidden;
 	top: 93px;
+	-webkit-appearance: none;
 }
 
 .fixed-position .dropdown .dropdown-menu {
@@ -768,6 +769,154 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	font-size: 12px;
 	line-height: 1.1;
 	color: #2b2b2b;
+}
+
+.login-process {
+	font-size: 14px;
+	line-height: 20px;
+	padding-bottom: 18px;
+	border-bottom: 1px solid #c4c4c4;
+	position: relative;
+	margin-bottom: 21px;
+}
+
+.login-process::before {
+	content: "or";
+	text-transform: uppercase;
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	-webkit-transform: translateY(50%);
+	-ms-transform: translateY(50%);
+	transform: translateY(50%);
+	font-weight: bold;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	border-radius: 100px;
+	display: block;
+	border: 1px solid #c4c4c4;
+	background: #fff;
+	font-size: 8px;
+}
+
+.login-process a {
+	padding: 10px 8px;
+}
+
+.login-process .icon {
+	width: 20px;
+	height: auto;
+}
+
+.login-process .icon svg {
+	width: 100%;
+	max-width: 100%;
+}
+
+.login-process .text {
+	width: calc(100% - 20px);
+	padding-left: 10px;
+}
+
+.login-process .btn-google {
+	border: 1px solid #848484;
+	color: #0a223d;
+}
+
+.login-process .btn-facebook {
+	background: #395998;
+	color: #fff;
+}
+
+.login-process .btn-facebook path {
+	fill: white;
+}
+
+.login-form input[type="text"],
+.login-form input[type="tel"],
+.login-form input[type="password"],
+.signup-form input[type="text"],
+.signup-form input[type="tel"],
+.signup-form input[type="password"] {
+	font-size: 12px;
+	line-height: 21px;
+	width: 100%;
+	padding: 6px 9px;
+	display: block;
+	margin: 0;
+	background: #fff;
+	border: 1px solid #848484;
+	border-radius: 5px;
+	color: #848484;
+}
+
+.login-form input[type="text"]::-webkit-input-placeholder,
+.login-form input[type="tel"]::-webkit-input-placeholder,
+.login-form input[type="password"]::-webkit-input-placeholder,
+.signup-form input[type="text"]::-webkit-input-placeholder,
+.signup-form input[type="tel"]::-webkit-input-placeholder,
+.signup-form input[type="password"]::-webkit-input-placeholder {
+	color: #848484;
+}
+
+.login-form input[type="text"]::-moz-placeholder,
+.login-form input[type="tel"]::-moz-placeholder,
+.login-form input[type="password"]::-moz-placeholder,
+.signup-form input[type="text"]::-moz-placeholder,
+.signup-form input[type="tel"]::-moz-placeholder,
+.signup-form input[type="password"]::-moz-placeholder {
+	opacity: 1;
+	color: #848484;
+}
+
+.login-form input[type="text"]:-moz-placeholder,
+.login-form input[type="tel"]:-moz-placeholder,
+.login-form input[type="password"]:-moz-placeholder,
+.signup-form input[type="text"]:-moz-placeholder,
+.signup-form input[type="tel"]:-moz-placeholder,
+.signup-form input[type="password"]:-moz-placeholder {
+	color: #848484;
+}
+
+.login-form input[type="text"]:-ms-input-placeholder,
+.login-form input[type="tel"]:-ms-input-placeholder,
+.login-form input[type="password"]:-ms-input-placeholder,
+.signup-form input[type="text"]:-ms-input-placeholder,
+.signup-form input[type="tel"]:-ms-input-placeholder,
+.signup-form input[type="password"]:-ms-input-placeholder {
+	color: #848484;
+}
+
+.login-form input[type="text"].placeholder,
+.login-form input[type="tel"].placeholder,
+.login-form input[type="password"].placeholder,
+.signup-form input[type="text"].placeholder,
+.signup-form input[type="tel"].placeholder,
+.signup-form input[type="password"].placeholder {
+	color: #848484;
+}
+
+.login-form .input-holder,
+.signup-form .input-holder {
+	margin-bottom: 10px;
+}
+
+.login-form .btn-holder,
+.signup-form .btn-holder {
+	font-size: 12px;
+	line-height: 20px;
+	margin: 0;
+	padding: 0 !important;
+	text-align: center;
+	font-weight: 600;
+}
+
+.login-form .btn,
+.signup-form .btn {
+	padding: 7px 15px;
+	margin-bottom: 10px;
 }
 
 .advertisement-list .col-holder {
@@ -1049,6 +1198,19 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	background: linear-gradient(360deg, #0a223d 23.24%, rgba(10, 34, 61, 0) 100%);
 }
 
+.main-event > a .bg-img {
+	-webkit-transition: -webkit-transform .3s;
+	transition: -webkit-transform .3s;
+	transition: transform .3s;
+	transition: transform .3s, -webkit-transform .3s;
+}
+
+.main-event > a:hover .bg-img {
+	-webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	transform: scale(1.1);
+}
+
 .main-event .info {
 	font-size: 12px;
 	line-height: 20px;
@@ -1080,6 +1242,10 @@ body {
 }
 
 @media (min-width: 768px) {
+	.hover-primary:hover {
+		color: #ec1f46 !important;
+	}
+
 	.header .navbar-dark .navbar-nav .nav-link {
 		font-size: 12px;
 		line-height: 1.428;
@@ -1109,6 +1275,10 @@ body {
 
 	.dropdown:hover .dropdown-toggle .login-text {
 		color: #ec1f46 !important;
+	}
+
+	.dropdown:hover .dropdown-toggle .icon path {
+		fill: #ec1f46 !important;
 	}
 
 	.dropdown .dropdown-menu {
@@ -1141,6 +1311,10 @@ body {
 
 	.search-form .btn-holder {
 		width: 177px !important;
+	}
+
+	.feature-list h3 a:hover {
+		color: #ec1f46 !important;
 	}
 
 	.main-event .img-holder {

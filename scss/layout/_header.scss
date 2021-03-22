@@ -250,6 +250,12 @@
         .login-text {
           color: $primary !important;
         }
+
+        .icon {
+          path {
+            fill: $primary !important;
+          }
+        }
       }
       @include media-breakpoint-up(lg) {
         & + .dropdown-menu {
@@ -268,6 +274,7 @@
     overflow-y: auto;
     overflow-x: hidden;
     top: 93px;
+    -webkit-appearance: none;
 
     .fixed-position & {
       height: calc(100% - 63px);
@@ -357,5 +364,103 @@
   .item-price {
     @include font(12px);
     color: $gray-800;
+  }
+}
+
+.login-process {
+  @include font(14px,20px);
+  padding-bottom: 18px;
+  border-bottom: 1px solid $gray-300;
+  position: relative;
+  margin-bottom: 21px;
+
+  &::before {
+    content: 'or';
+    text-transform: uppercase;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateY(50%);
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 100px;
+    display: block;
+    border: 1px solid $gray-300;
+    background: $white;
+    font-size: 8px;
+  }
+
+  a {
+    padding: 10px 8px;
+  }
+  
+  .icon {
+    width: 20px;
+    height: auto;
+
+    svg {
+      width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  .text {
+    width: calc(100% - 20px);
+    padding-left: 10px;
+  }
+
+  .btn-google {
+    border: 1px solid $gray-200;
+    color: $gray-900;
+  }
+
+  .btn-facebook {
+    background: #395998;
+    color: $white;
+    
+    path {
+      fill: white;
+    }
+  }
+}
+
+.login-form,
+.signup-form {
+  input[type="text"],
+  input[type="tel"],
+  input[type="password"] {
+    @include font(12px ,21px);
+    width: 100%;
+    padding: 6px 9px;
+    display: block;
+    margin: 0;
+    background: $white;
+    border: 1px solid $gray-200;
+    border-radius: 5px;;
+    color: $gray-200;
+
+    @include placeholder {
+      color: $gray-200;
+    }
+  }
+
+  .input-holder {
+    margin-bottom: 10px;
+  }
+
+  .btn-holder {
+    @include font(12px,20px);
+    margin: 0;
+    padding: 0 !important;
+    text-align: center;
+    font-weight: 600;
+  }
+
+  .btn {
+    padding: 7px 15px;
+    margin-bottom: 10px;
   }
 }

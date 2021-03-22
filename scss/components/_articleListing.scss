@@ -51,6 +51,17 @@
     }
   }
 
+  >a {
+    .bg-img {
+      transition: transform .3s;
+    }
+    &:hover {
+      .bg-img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
   .info {
     @include font(12px,20px);
 
