@@ -233,9 +233,10 @@
   }
 }
 
-.dropdown-toggle {
+.dropdown-toggle[type="button"] {
   -webkit-appearance: none !important;
-  
+  appearance: none !important;
+
   &:after {
     content: none;
   }
