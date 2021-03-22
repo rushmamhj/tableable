@@ -1215,6 +1215,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	transform: scale(1.1);
 }
 
+.main-event > a:hover path {
+	fill: #fff;
+}
+
 .main-event .info {
 	font-size: 12px;
 	line-height: 20px;
