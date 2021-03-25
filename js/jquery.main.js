@@ -1,8 +1,39 @@
 jQuery(function() {
+	initHideloginSignup();
 	initCustomForms();
 	initBannerCarousel();
 	initStickyScrollBlock();
 });
+
+function initHideloginSignup() {
+	var options= {
+		mainHolder: '.login-signup-holder',
+		holder: '.login-form',
+		opener: '.signup-opener',
+		className: 'signup-active',
+		rivalClass: 'login-active',
+	}
+
+	var options1= {
+		mainHolder: '.login-signup-holder',
+		holder: '.signup-form',
+		opener: '.login-opener',
+		className: 'login-active',
+		rivalClass: 'signup-active',
+	}
+
+	onLoginOrSignup(options);
+	onLoginOrSignup(options1);
+
+	function onLoginOrSignup(options) {
+		var holder = $(options.holder);
+		var opener = holder.find(options.opener);
+		opener.on("click",function() {
+			$(options.mainHolder).addClass(options.className);
+			$(options.mainHolder).removeClass(options.rivalClass);
+		});
+	}
+}
 
 
 // initialize custom form elements

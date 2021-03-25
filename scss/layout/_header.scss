@@ -138,6 +138,12 @@
       right: -9px;
       top: -4px;
     }
+
+    .dropdown-menu {
+      @include media-breakpoint-up(md) {
+        width: 253px;
+      }
+    }
   }
 
   .login-signup-holder {
@@ -165,6 +171,68 @@
         svg path {
           fill: $primary;
         }
+      }
+    }
+
+    .user-photo {
+      @include size(40px);
+      overflow: hidden;
+      border-radius: 100px;
+    }
+
+    &.logged-in {
+      .user-photo {
+        display: block !important;
+      }
+
+      .username {
+        @include media-breakpoint-up(md) {
+          display: inline !important;
+        }
+      }
+      
+      .login-text,
+      .user-icon {
+        display: none !important;
+      }
+
+      .logged-out {
+        display: none !important;
+      }
+
+      .logged-in {
+        display: block !important;
+      }
+
+      ul {
+        li {
+          a {
+            &:hover {
+              color: $white;
+              background: $primary;
+            }
+          }
+        }
+      }
+    }
+
+    &.signup-active {
+      .signup-form {
+        display: block;
+      }
+
+      .login-form {
+        display: none;
+      }
+    }
+
+    &.login-active {
+      .login-form {
+        display: block;
+      }
+
+      .signup-form {
+        display: none;
       }
     }
   }
@@ -216,8 +284,6 @@
 }
 
 .login-signup-holder {
-  width: 40px;
-
   .user-icon {
     width: 20px;
   }
@@ -250,7 +316,8 @@
   &:hover {
     .dropdown-toggle {
       @include media-breakpoint-up(md) {
-        .login-text {
+        .login-text,
+        .username {
           color: $primary !important;
         }
 
@@ -262,7 +329,10 @@
       }
       @include media-breakpoint-up(lg) {
         & + .dropdown-menu {
-          display: block !important;
+          opacity: 1 !important;
+          visibility: visible !important;
+          transform: translateY(0);
+          z-index: 9;
         }
       }
 
@@ -294,7 +364,12 @@
     }
 
     @include media-breakpoint-up(lg) {
-      display: none !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      transform: translateY(50px);
+      display: block !important;
+      z-index: -1;
+      transition: opacity .3s, visibility .3s, transform .3s;
     }
     
     &:before {
@@ -331,6 +406,11 @@
     .btn-holder {
       margin: 0 -5px;
       padding: 10px 0 0;
+
+      .btn {
+        text-transform: capitalize;
+        padding: 6px 15px;
+      }
     }
   }
 
@@ -455,7 +535,7 @@
 
   .btn-holder {
     @include font(12px,20px);
-    margin: 0;
+    margin: 0 !important;
     padding: 0 !important;
     text-align: center;
     font-weight: 600;

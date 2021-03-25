@@ -39,12 +39,15 @@ $media-expressions: (
 @import 'layout/header';
 @import 'layout/common';
 
-/** Homepage **/
+/* Homepage */
 @import 'components/bannerSlider';
 @import 'components/searchSection';
 @import 'components/featuresSection';
 @import 'components/specialMenu';
 @import 'components/articleListing';
+
+/* Contact */
+@import 'components/contact-section';
 
 @import 'layout/footer';
 

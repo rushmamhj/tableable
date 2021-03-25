@@ -1,0 +1,93 @@
+.contact-section {
+  @include font(14px,22px);
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: rgba($secondary,.7);
+    z-index: 2;
+  }
+
+  h1 {
+    @include media-breakpoint-up(md) {
+      font-size: 48px;
+      line-height: 1.2;
+    }
+  }
+
+  h2 {
+    @include font(18px,24px);
+    text-transform: uppercase;
+  }
+}
+
+.two-col {
+  margin: 0 -15px;
+}
+
+.contact-form  {
+  label {
+    @include font(18px,24px);
+    font-weight: 600;
+    margin-bottom: 6px;
+    display: inline-block;
+    vertical-align: top;
+    text-transform: capitalize;
+
+    span {
+      font-size: 18px;
+      color: $danger;
+    }
+  }
+
+  .form-control {
+    @include font(18px,24px);
+    background: $white;
+    color: $black;
+    padding: 12px 20px;
+    min-height: 48px;
+    border-radius: 4px;
+  }
+
+  textarea.form-control {
+    height: 143px !important;
+    min-height: 143px !important;
+  }
+
+  .row {
+    margin: 0 -12px;
+  }
+
+  .btn {
+    min-width: 160px;
+  }
+
+  .msg  {
+    @include font(12px,1.2);
+    color: $danger;
+    top: 50%;
+    right: 13px;
+    transform: translateY(-50%);
+  }
+}
+
+.location-list {
+  .icon {
+    left: 0;
+    top:5px;
+    width: 39px;
+    text-align: center;
+  }
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

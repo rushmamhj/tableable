@@ -642,6 +642,51 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	fill: #ec1f46;
 }
 
+.header .login-signup-holder .user-photo {
+	width: 40px;
+	height: 40px;
+	overflow: hidden;
+	border-radius: 100px;
+}
+
+.header .login-signup-holder.logged-in .user-photo {
+	display: block !important;
+}
+
+.header .login-signup-holder.logged-in .login-text,
+.header .login-signup-holder.logged-in .user-icon {
+	display: none !important;
+}
+
+.header .login-signup-holder.logged-in .logged-out {
+	display: none !important;
+}
+
+.header .login-signup-holder.logged-in .logged-in {
+	display: block !important;
+}
+
+.header .login-signup-holder.logged-in ul li a:hover {
+	color: #fff;
+	background: #ec1f46;
+}
+
+.header .login-signup-holder.signup-active .signup-form {
+	display: block;
+}
+
+.header .login-signup-holder.signup-active .login-form {
+	display: none;
+}
+
+.header .login-signup-holder.login-active .login-form {
+	display: block;
+}
+
+.header .login-signup-holder.login-active .signup-form {
+	display: none;
+}
+
 .header .language-selector {
 	border: 1px solid rgba(153, 143, 143, .36);
 	border-width: 0 0 0 1px;
@@ -660,10 +705,6 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 .header .social-icons a:hover svg path {
 	fill: #ec1f46;
-}
-
-.login-signup-holder {
-	width: 40px;
 }
 
 .login-signup-holder .user-icon {
@@ -740,6 +781,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .dropdown .dropdown-menu .btn-holder {
 	margin: 0 -5px;
 	padding: 10px 0 0;
+}
+
+.dropdown .dropdown-menu .btn-holder .btn {
+	text-transform: capitalize;
+	padding: 6px 15px;
 }
 
 .dropdown .dropdown-toggle span {
@@ -911,7 +957,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 .signup-form .btn-holder {
 	font-size: 12px;
 	line-height: 20px;
-	margin: 0;
+	margin: 0 !important;
 	padding: 0 !important;
 	text-align: center;
 	font-weight: 600;
@@ -936,7 +982,7 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	opacity: .7;
 }
 
-/** Homepage **/
+/* Homepage */
 
 .banner {
 	min-height: 525px;
@@ -1232,6 +1278,98 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	padding-top: 98%;
 }
 
+/* Contact */
+
+.contact-section {
+	font-size: 14px;
+	line-height: 22px;
+}
+
+.contact-section::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: rgba(10, 34, 61, .7);
+	z-index: 2;
+}
+
+.contact-section h2 {
+	font-size: 18px;
+	line-height: 24px;
+	text-transform: uppercase;
+}
+
+.two-col {
+	margin: 0 -15px;
+}
+
+.contact-form label {
+	font-size: 18px;
+	line-height: 24px;
+	font-weight: 600;
+	margin-bottom: 6px;
+	display: inline-block;
+	vertical-align: top;
+	text-transform: capitalize;
+}
+
+.contact-form label span {
+	font-size: 18px;
+	color: #ec1f46;
+}
+
+.contact-form .form-control {
+	font-size: 18px;
+	line-height: 24px;
+	background: #fff;
+	color: #000;
+	padding: 12px 20px;
+	min-height: 48px;
+	border-radius: 4px;
+}
+
+.contact-form textarea.form-control {
+	height: 143px !important;
+	min-height: 143px !important;
+}
+
+.contact-form .row {
+	margin: 0 -12px;
+}
+
+.contact-form .btn {
+	min-width: 160px;
+}
+
+.contact-form .msg {
+	font-size: 12px;
+	line-height: 1.2;
+	color: #ec1f46;
+	top: 50%;
+	right: 13px;
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+.location-list .icon {
+	left: 0;
+	top: 5px;
+	width: 39px;
+	text-align: center;
+}
+
+.location-list a {
+	color: #fff;
+}
+
+.location-list a:hover {
+	color: #ec1f46;
+}
+
 .footer-nav a:hover {
 	color: #ec1f46 !important;
 }
@@ -1243,6 +1381,26 @@ body > .jcf-select-drop.jcf-drop-flipped {
 
 .footer-links a:hover {
 	color: #ec1f46;
+}
+
+.payment-method li a {
+	width: 20px;
+	display: block;
+}
+
+.payment-method li a:hover {
+	opacity: .6;
+}
+
+.payment-method li a img {
+	width: 100%;
+	max-width: 100%;
+	height: auto;
+}
+
+.feed-holder img,
+.feed-holder iframe {
+	width: 100%;
 }
 
 body {
@@ -1265,8 +1423,16 @@ body {
 		height: auto !important;
 	}
 
+	.header .cart-holder .dropdown-menu {
+		width: 253px;
+	}
+
 	.header .login-signup-holder {
 		width: 125px;
+	}
+
+	.header .login-signup-holder.logged-in .username {
+		display: inline !important;
 	}
 
 	.header .language-selector {
@@ -1281,7 +1447,8 @@ body {
 		position: relative !important;
 	}
 
-	.dropdown:hover .dropdown-toggle .login-text {
+	.dropdown:hover .dropdown-toggle .login-text,
+	.dropdown:hover .dropdown-toggle .username {
 		color: #ec1f46 !important;
 	}
 
@@ -1333,6 +1500,11 @@ body {
 		padding-top: 0;
 	}
 
+	.contact-section h1 {
+		font-size: 48px;
+		line-height: 1.2;
+	}
+
 	.footer-links {
 		padding: 0 150px;
 	}
@@ -1369,11 +1541,26 @@ body {
 	}
 
 	.dropdown:hover .dropdown-toggle + .dropdown-menu {
-		display: block !important;
+		opacity: 1 !important;
+		visibility: visible !important;
+		-webkit-transform: translateY(0);
+		-ms-transform: translateY(0);
+		transform: translateY(0);
+		z-index: 9;
 	}
 
 	.dropdown .dropdown-menu {
-		display: none !important;
+		opacity: 0 !important;
+		visibility: hidden !important;
+		-webkit-transform: translateY(50px);
+		-ms-transform: translateY(50px);
+		transform: translateY(50px);
+		display: block !important;
+		z-index: -1;
+		-webkit-transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+		transition: opacity .3s, visibility .3s, -webkit-transform .3s;
+		transition: opacity .3s, visibility .3s, transform .3s;
+		transition: opacity .3s, visibility .3s, transform .3s, -webkit-transform .3s;
 	}
 }
 
