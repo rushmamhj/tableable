@@ -1,0 +1,259 @@
+.cartpagesection-holder {
+  box-shadow: 0 0 4px 0 rgba(0,0,0,.15);
+}
+
+.cartpage-item-list {
+  .title {
+    @include font(20px,24px);
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  .img-holder {
+    @include size(100px);
+
+    @include media-breakpoint-up(md) {
+      @include size(138px);
+    }
+  }
+
+  .text-holder {
+    width: calc(100% - 100px);
+
+    @include media-breakpoint-up(md) {
+      width: calc(100% - 138px);
+    }
+  }
+
+  .item {
+    >div {
+      &:first-child {
+        position: static;
+      }
+    }
+  }
+
+  .item-title {
+    @include font(20px,24px);
+    color: $gray-800;
+  }
+
+  .restaurant-name{
+    @include font(18px, 24px);
+    color: $gray-200;
+  }
+
+  .price {
+    @include font(12px,20px);
+
+    @include media-breakpoint-up(md) {
+      @include font(20px,24px);
+    }
+  }
+
+  .btn-holder {
+    .btn.btn-outline-primary {
+      min-width: 100px;
+      width: 100%;
+      border-radius: 0;
+      padding: 9px 15px !important;
+
+      @include media-breakpoint-up(md) {
+        min-width: 121px;
+        width: auto;
+      }
+    }
+  }
+
+}
+
+.cart-btn-holder {
+  border-top: 1px solid rgba(#c4c4c4, .5);
+  padding: 16px 12px;
+  margin: 0 -12px;
+
+  @include media-breakpoint-up(md) {
+    padding: 16px 27px;
+    margin: 0 -25px;
+  }
+
+  .btn.btn-outline-primary {
+    min-width: 220px;
+    border-radius: 0;
+  padding: 9px 15px !important;
+  }
+}
+
+.section-checkout {
+  h2 {
+    color: $gray-700;
+  }
+}
+
+.checkout-form-section {
+  h3 {
+    @include font(20px,24px);
+    color: $gray-700;
+    border-bottom: 1px solid rgba(#c4c4c4, .5);
+  }
+}
+
+.checkout-form {
+  label {
+    @include font(18px,24px);
+    color: #6D6D6D;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 6px;
+    font-weight: 600;
+  }
+
+  .form-control {
+    @include font(18px,24px);
+    padding: 12px 15px;
+    border: 0;
+    border-radius: 4px;
+    background: #F8FAFC;
+    min-height: 48px;
+  }
+
+  .btn {
+    min-width: 220px;
+    border-radius: 0;
+    font-weight: normal;
+    padding: 9px;
+  }
+}
+
+.was-validated {
+  input[type="radio"]:invalid {
+    & ~ .fake-input {
+      border-color: $primary;
+    }
+  }
+}
+
+.payment-methods {
+  margin: 0 0 -20px;
+
+  label {
+    @include font(18px,24px);
+    color: #6D6D6D;
+  }
+
+  li {
+    width: 50%;
+    padding-bottom: 20px;
+
+    @include media-breakpoint-up(md) {
+      width: auto;
+      padding-right: 30px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      padding-right: 71px;
+    }
+  }
+
+  [type="radio"]{
+    position:fixed;
+    left:0;
+    top:0;
+    opacity:0;
+    z-index: -1;
+    &:checked {
+      & + .fake-input {
+        &::before {
+          opacity:1;
+        }
+      }
+    }
+  }
+
+  
+
+  .fake-input{
+    display: inline-block;
+    width:20px;
+    height:20px;
+    border:2px solid #3B4256;
+    background: $white;
+    vertical-align: middle;
+    position: relative;
+    margin-right: 14px;
+    border-radius:100%;
+
+    &::before {
+      content:'';
+      position: absolute;
+      top: 3px;
+      right: 3px;
+      bottom: 3px;
+      left: 3px;
+      background: #3B4256;
+      border-radius:100%;
+      opacity: 0;
+    }
+  }
+}
+
+.widget {
+  padding: 12px 20px 21px;
+  margin: 0 0 18px;
+
+  h3 {
+    @include font(20px,27px);
+    font-weight: bold;
+    color: $gray-700;
+    margin-bottom: 6px;
+  }
+}
+
+.couponcode-form {
+  margin: 0;
+
+  .btn {
+    padding: 5px;
+    width: 46px;
+    border-radius: 0;
+  }
+
+  input[type="text"] {
+    @include font(14px,20px);
+    font-weight: 600;
+    color: #6D6D6D;
+    border: 1px solid $primary;
+    padding: 9px 59px 9px 13px;
+    width: 100%;
+
+    @include placeholder {
+      color: #6D6D6D;
+    }
+  }
+}
+
+.summary-block {
+  @include font(14px,19px);
+  color: #6D6D6D;
+  
+  h3 {
+    margin-bottom: 24px;
+  }
+
+  .total {
+    border-top: 1px solid rgba($gray-300,.5);
+  }
+}
+
+.accepted-block {
+  h3 {
+    @include font(18px,24px);
+    color: #6D6D6D;
+  }
+  ul {
+    margin: 0 -8px 16px;
+    li {
+      padding: 0 8px 16px;
+    }
+  }
+}

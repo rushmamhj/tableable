@@ -49,6 +49,9 @@ $media-expressions: (
 /* Contact */
 @import 'components/contact-section';
 
+/* cart page */
+@import 'components/cartSection';
+
 @import 'layout/footer';
 
 body {

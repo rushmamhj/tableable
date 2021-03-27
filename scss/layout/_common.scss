@@ -13,3 +13,15 @@
     }
   }
 }
+
+.heading-holder {
+  background: $gray-500;
+  
+  h1 {
+    @include font(24px,30px);
+    margin: 0;
+    padding: 25px 0;
+    color: #212529;
+    text-shadow: 0 4px 4px rgba(#000,.25);
+  }
+}

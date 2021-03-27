@@ -214,8 +214,8 @@
 						</div>
 						<!-- login holder and signupholder -->
 						<!-- comment this line and uncomment next line for logged out content -->
-						<!-- <div class="login-signup-holder ml-5 ml-xl-10 dropdown logged-in"> -->
-						<div class="login-signup-holder ml-5 ml-xl-10 dropdown login-active">
+						<div class="login-signup-holder ml-5 ml-xl-10 dropdown logged-in">
+						<!-- <div class="login-signup-holder ml-5 ml-xl-10 dropdown login-active"> -->
 							<a href="#" class="dropdown-toggle d-flex flex-wrap align-items-center justify-content-end"  type="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								<div class="user d-inline-block">
 									<span class="user-icon icon d-block d-md-none pr-1">
@@ -344,96 +344,265 @@
 		</header>
 		<!-- contain main informative part of the site -->
 		<main id="main">
-      <!-- contact section -->
-      <section class="contact-section relative text-white py-17">
-        <div class="bg-img z-1">
-          <img src="images/contact-bg.jpg" alt="Image Description">
+      <div class="heading-holder mb-10">
+        <div class="container">
+          <h1>Shopping Cart</h1>
         </div>
-        <div class="container relative z-3">
-          <h1 class="text-center mb-13 mb-md-22">Contact Us</h1>
-          <div class="two-col d-md-flex flex-wrap">
-            <div class="col-md-6">
-              <h2 class="mb-8">Send us a message</h2>
-              <form action="#" class="contact-form needs-validation" novalidate>
-                <div class="row">
-                  <div class="col-12 mb-7 px-3 col-md-6">
-                    <label for="fullname">Your full name <span>*</span></label>
-                    <div class="input-holder">
-                      <input type="text" class="form-control" id="fullname" required>
-                      <div class="invalid-feedback text-danger">
-                        Enter your full name
+      </div>
+      <!-- cart items section -->
+      <section class="section">
+        <div class="container">
+          <div class="cartpagesection-holder shadow-sm rounded-4 px-3 pt-3 pt-md-7 px-md-6">
+						<div class="cartpage-item-list pb-13">
+							<!-- title row -->
+							<div class="item row d-none d-md-flex pb-11">
+								<div class="col-12 col-md-6">
+									<span class="title">Items</span>
+								</div>
+								<div class="col-md-6 row">
+									<div class="col-md-5 col-lg-6">
+										<span class="title">Quantity</span>
+									</div>
+									<div class="col-md-7 col-lg-6">
+										<span class="title d-block">Price</span>
+									</div>
+								</div>
+							</div>
+							<!-- title row ends -->
+
+							<!-- cart items selected -->
+							<div class="item row relative pb-8">
+								<div class="col-12 col-md-6 d-flex flex-wrap pb-3 pb-md-0">
+									<div class="img-holder d-block relative">
+										<div class="bg-img">
+											<img src="images/item-02.jpg" alt="Images Description">
+										</div>
+									</div>
+									<div class="text-holder pl-3 pl-md-5 pl-lg-8 pt-1">
+										<span class="item-title d-block font-semibold mb-2">Chicken Momo</span>
+										<span class="restaurant-name d-block">From The Bakery Cafe </span>
+									</div>
+								</div>
+								<div class="row align-items-center align-items-md-start col-md-6 mx-0 px-0">
+									<div class="col-5 col-lg-6 mb-2 mb-md-0">
+										<select class="qty-select">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+									<div class="col-2 text-center px-0">
+										<span class="price d-block text-center text-md-left pt-md-3 font-semibold">$10</span>
+									</div>
+									<div class="col-5 col-lg-4">
+										<div class="btn-holder text-center pt-md-1">
+											<a href="#" class="btn btn-outline-primary text-capitalize">Remove</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- cart items selected ends -->
+
+							<!-- cart items selected -->
+							<div class="item row relative pb-8">
+								<div class="col-12 col-md-6 d-flex flex-wrap pb-3 pb-md-0">
+									<div class="img-holder d-block relative">
+										<div class="bg-img">
+											<img src="images/item-02.jpg" alt="Images Description">
+										</div>
+									</div>
+									<div class="text-holder pl-3 pl-md-5 pl-lg-8 pt-1">
+										<span class="item-title d-block font-semibold mb-2">Chicken Momo</span>
+										<span class="restaurant-name d-block">From The Bakery Cafe </span>
+									</div>
+								</div>
+								<div class="row align-items-center align-items-md-start col-md-6 mx-0 px-0">
+									<div class="col-5 col-lg-6 mb-2 mb-md-0">
+										<select class="qty-select">
+											<option value="1">1</option>
+											<option value="2">2</option>
+											<option value="3">3</option>
+											<option value="4">4</option>
+											<option value="5">5</option>
+										</select>
+									</div>
+									<div class="col-2 text-center px-0">
+										<span class="price d-block text-center text-md-left pt-md-3 font-semibold">$10</span>
+									</div>
+									<div class="col-5 col-lg-4">
+										<div class="btn-holder text-center pt-md-1">
+											<a href="#" class="btn btn-outline-primary text-capitalize">Remove</a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<!-- cart items selected ends -->
+						</div>
+						<div class="cart-btn-holder">
+							<a href="#" class="btn btn-outline-primary text-capitalize">Continue Shopping</a>
+						</div>
+					</div>
+        </div>
+      </section>
+      <!-- cart items section end -->
+
+      
+      <!-- checkout section -->
+      <section class="section section-checkout pt-10 pt-md-17 pb-md-21">
+        <div class="container">
+          <h2 class="mb-10 mb-md-17">Checkout</h2>
+          <div class="content-holder row">
+            <div class="content col-12 col-md-8 col-lg-9">
+              <div class="checkout-form-section shadow-sm p-3 px-md-7 pt-md-5 pb-md-6">
+                <form action="#" class="checkout-form mb-0 needs-validation" novalidate>
+                  <h3 class="pb-3 pb-md-5 mb-3 mb-md-7">Contact Details</h3>
+                  <div class="row">
+                    <div class="col-12 col-md-6 mb-8">
+                      <label for="firstname">First Name</label>
+                      <div class="input-holder">
+                        <input type="text" class="form-control" id="firstname" required>
+												<div class="invalid-feedback text-danger">
+													Enter your First Name
+												</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-8">
+                      <label for="lastname">Last Name</label>
+                      <div class="input-holder">
+                        <input type="text" class="form-control" id="lastname" required>
+												<div class="invalid-feedback text-danger">
+													Enter your Last Name
+												</div>
                       </div>
                     </div>
                   </div>
-                  <div class="col-12 mb-7 px-3 col-md-6">
-                    <label for="phone">Phone number <span>*</span></label>
-                    <div class="input-holder">
-                      <input type="tel" class="form-control" id="phone" required>
-                      <div class="invalid-feedback text-danger">
-                        Enter your phone Number
+                  <div class="row">
+                    <div class="col-12 col-md-6 mb-8">
+                      <label for="address">Address</label>
+                      <div class="input-holder">
+                        <input type="text" class="form-control" id="address" required>
+												<div class="invalid-feedback text-danger">
+													Enter your Address
+												</div>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-6 mb-8">
+                      <label for="phoneno">Phone Number</label>
+                      <div class="input-holder">
+                        <input type="tel" class="form-control" id="phoneno" required>
+												<div class="invalid-feedback text-danger">
+													Enter your phone Number
+												</div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="row">
-                  <div class="col-12 mb-7 px-3">
-                    <label for="email">Email</label>
-                    <div class="input-holder">
-                      <input type="email" class="form-control" id="email">
-                    </div>
+                  <h3 class="pt-2 pb-3 pb-md-5 mb-3 mb-md-4">Payment From</h3>
+                  <ul class="payment-methods listreset d-flex flex-wrap custom-control custom-radio">
+                    <li>
+                      <label for="esewa">
+                        <input id="esewa" type="radio" name="payfrom" required>
+                        <span class="fake-input"></span>
+                        <span class="fake-label">Esewa</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label for="ime">
+                        <input id="ime" type="radio" name="payfrom" required>
+                        <span class="fake-input"></span>
+                        <span class="fake-label">Ime pay</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label for="khalti">
+                        <input id="khalti" type="radio" name="payfrom" required>
+                        <span class="fake-input"></span>
+                        <span class="fake-label">Khalti</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label for="prabhu">
+                        <input id="prabhu" type="radio" name="payfrom" required>
+                        <span class="fake-input"></span>
+                        <span class="fake-label">Prabhu</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <div class="btn-holder pt-8 text-md-right">
+                    <input type="submit" class="btn btn-primary" value="Pay Now">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <aside class="sidebar col-12 col-md-4 col-lg-3 pt-4 pt-md-0">
+              <div class="widget coupon-code shadow-sm">
+                <form action="#" class="couponcode-form">
+                  <h3>Have a coupon?</h3>
+                  <div class="input-holder relative">
+										<input type="text" placeholder="Coupon Code">
+										<button type="submit" class="btn btn-primary absolute right-0 top-0 bottom-0">
+											<svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M9.3103 15.1272C9.21136 15.0285 9.13285 14.9112 9.07929 14.7822C9.02573 14.6531 8.99816 14.5147 8.99816 14.3749C8.99816 14.2352 9.02573 14.0968 9.07929 13.9677C9.13285 13.8386 9.21136 13.7214 9.3103 13.6227L14.9352 7.99993L9.3103 2.37718C9.21152 2.2784 9.13315 2.16112 9.07969 2.03205C9.02623 1.90298 8.99871 1.76464 8.99871 1.62493C8.99871 1.48523 9.02623 1.34689 9.07969 1.21782C9.13315 1.08875 9.21152 0.97147 9.3103 0.872682C9.40909 0.773896 9.52637 0.695533 9.65544 0.642071C9.78451 0.588608 9.92285 0.561091 10.0626 0.561091C10.2023 0.561091 10.3406 0.588607 10.4697 0.64207C10.5987 0.695533 10.716 0.773896 10.8148 0.872682L17.1898 7.24768C17.2888 7.34638 17.3673 7.46363 17.4208 7.59271C17.4744 7.7218 17.502 7.86018 17.502 7.99993C17.502 8.13969 17.4744 8.27807 17.4208 8.40715C17.3673 8.53624 17.2888 8.65349 17.1898 8.75218L10.8148 15.1272C10.7161 15.2261 10.5989 15.3046 10.4698 15.3582C10.3407 15.4118 10.2023 15.4393 10.0626 15.4393C9.9228 15.4393 9.78442 15.4118 9.65533 15.3582C9.52625 15.3046 9.409 15.2261 9.3103 15.1272Z" fill="white"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M16.4375 8C16.4375 8.28179 16.3256 8.55204 16.1263 8.7513C15.927 8.95056 15.6568 9.0625 15.375 9.0625L1.5625 9.0625C1.28071 9.0625 1.01046 8.95056 0.811198 8.7513C0.61194 8.55204 0.5 8.28179 0.5 8C0.5 7.71821 0.61194 7.44796 0.811198 7.2487C1.01046 7.04944 1.28071 6.9375 1.5625 6.9375L15.375 6.9375C15.6568 6.9375 15.927 7.04944 16.1263 7.2487C16.3256 7.44796 16.4375 7.71821 16.4375 8Z" fill="white"/>
+											</svg>                      
+										</button>
+									</div>
+                </form>
+              </div>
+              <div class="widget shadow-sm summary-block">
+                <h3>Summary</h3>
+                <div class="row mb-4">
+                  <div class="col-8">
+                    <span class="title d-block">Subtotal</span>
+                  </div>
+                  <div class="col-4">
+                    <span class="price font-bold d-block text-right">$20</span>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-12 mb-7 px-3">
-                    <label for="address">Address</label>
-                    <div class="input-holder">
-                      <textarea cols="30" rows="5" class="form-control" id="address"></textarea>
-                    </div>
+                <div class="row mb-4">
+                  <div class="col-8">
+                    <span class="title d-block">Service Fee</span>
+                  </div>
+                  <div class="col-4">
+                    <span class="price font-bold d-block text-right">$2</span>
                   </div>
                 </div>
-                <div class="btn-holder relative">
-                  <input type="submit" class="btn btn-primary" value="send">
-                  <span class="msg d-inline-block absolute">* Required Fields</span>
+                <div class="row mx-0 total font-bold pt-5">
+                  <div class="col-8 pl-0">
+                    <span class="title d-block">Total</span>
+                  </div>
+                  <div class="col-4 pr-0">
+                    <span class="price d-block text-right">$22</span>
+                  </div>
                 </div>
-              </form>
-            </div>
-            <div class="col-md-6">
-              <h2 class="mb-6">Contact Details</h2>
-              <span class="info d-block mb-6">Feel free to contact us by phone, email or by our contact form</span>
-              <ul class="location-list mb-2 listreset">
-                <li class="relative pl-13 pb-6">
-                  <span class="icon absolute">
-                    <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M7.84998 0C3.53254 0 0.0406494 3.13 0.0406494 7C0.0406494 11.17 4.97168 16.92 7.00211 19.11C7.44836 19.59 8.26276 19.59 8.70901 19.11C10.7283 16.92 15.6593 11.17 15.6593 7C15.6593 3.13 12.1674 0 7.84998 0ZM7.84998 9.5C7.11028 9.5 6.40087 9.23661 5.87783 8.76777C5.35478 8.29893 5.06093 7.66304 5.06093 7C5.06093 6.33696 5.35478 5.70107 5.87783 5.23223C6.40087 4.76339 7.11028 4.5 7.84998 4.5C8.58968 4.5 9.29909 4.76339 9.82213 5.23223C10.3452 5.70107 10.639 6.33696 10.639 7C10.639 7.66304 10.3452 8.29893 9.82213 8.76777C9.29909 9.23661 8.58968 9.5 7.84998 9.5Z" fill="#EC1F46"/>
-                    </svg>
-                  </span>
-                  9748 Blossom Hill Rd undefined Lansing, Idaho 68545 United States
-                </li>
-                <li class="relative pl-13 pb-6">
-                  <span class="icon absolute">
-                    <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M18.8452 9.54067H20.9835C20.9835 4.62442 16.8427 0.916626 11.3506 0.916626V2.83329C15.6934 2.83329 18.8452 5.65367 18.8452 9.54067Z" fill="#EC1F46"/>
-                      <path d="M11.3613 6.66669C13.6097 6.66669 14.5687 7.52632 14.5687 9.54169H16.707C16.707 6.45107 14.8093 4.75003 11.3613 4.75003V6.66669ZM15.0199 11.8829C14.8145 11.7155 14.5445 11.6263 14.267 11.634C13.9895 11.6416 13.7263 11.7457 13.5327 11.9241L10.9743 14.2826C10.3585 14.1772 9.12042 13.8312 7.84601 12.6917C6.5716 11.5484 6.18565 10.4358 6.07125 9.88765L8.70025 7.5934C8.89955 7.42007 9.01579 7.18402 9.02437 6.93522C9.03295 6.68643 8.9332 6.4444 8.74622 6.26036L4.79577 2.36665C4.60872 2.18203 4.34874 2.07005 4.07106 2.05448C3.79338 2.03892 3.51986 2.12099 3.3086 2.28328L0.988582 4.06673C0.80374 4.23302 0.693414 4.45433 0.678532 4.68869C0.662495 4.92828 0.356723 10.6035 5.26619 15.0061C9.54914 18.8442 14.9141 19.125 16.3916 19.125C16.6076 19.125 16.7401 19.1193 16.7754 19.1174C17.0368 19.1042 17.2836 19.0049 17.4682 18.8385L19.4568 16.7579C19.638 16.5687 19.7297 16.3236 19.7126 16.0747C19.6954 15.8258 19.5707 15.5927 19.3649 15.4249L15.0199 11.8829Z" fill="#EC1F46"/>
-                    </svg>
-                  </span>
-                  Tel (business hours) : <a href="tel:2691500">269 1500</a> <br>
-                  Tel (hotline) Monday - Saturday: <a href="tel:52566138">52-56-61-38</a> (08:00 am – 20:00 pm) <br>
-                  Tel (hotline) Sunday: <a href="tel:52566138">52-56-61-38</a> (08:00 am – 14:00 pm) <br>
-                </li>
-                <li class="relative pl-13 pb-6">
-                  <span class="icon absolute">
-                    <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M17.2874 0.333374H2.41247C1.38981 0.333374 0.562397 1.08337 0.562397 2.00004L0.553101 12C0.553101 12.9167 1.38981 13.6667 2.41247 13.6667H17.2874C18.31 13.6667 19.1467 12.9167 19.1467 12V2.00004C19.1467 1.08337 18.31 0.333374 17.2874 0.333374ZM16.9155 3.87504L10.3427 7.55837C10.0452 7.72504 9.65469 7.72504 9.35719 7.55837L2.78434 3.87504C2.69112 3.82813 2.60948 3.76476 2.54438 3.68875C2.47927 3.61275 2.43205 3.52569 2.40556 3.43285C2.37908 3.34001 2.37389 3.24332 2.3903 3.14863C2.40671 3.05394 2.44439 2.96322 2.50105 2.88196C2.55771 2.8007 2.63217 2.73059 2.71994 2.67587C2.8077 2.62115 2.90694 2.58297 3.01164 2.56362C3.11635 2.54428 3.22434 2.54418 3.32909 2.56333C3.43384 2.58248 3.53316 2.62048 3.62105 2.67504L9.84992 6.16671L16.0788 2.67504C16.1667 2.62048 16.266 2.58248 16.3708 2.56333C16.4755 2.54418 16.5835 2.54428 16.6882 2.56362C16.7929 2.58297 16.8921 2.62115 16.9799 2.67587C17.0677 2.73059 17.1421 2.8007 17.1988 2.88196C17.2555 2.96322 17.2931 3.05394 17.3096 3.14863C17.326 3.24332 17.3208 3.34001 17.2943 3.43285C17.2678 3.52569 17.2206 3.61275 17.1555 3.68875C17.0904 3.76476 17.0087 3.82813 16.9155 3.87504Z" fill="#EC1F46"/>
-                    </svg>  
-                  </span>
-                  <a href="mailto:&#099;&#104;&#101;&#114;&#108;&#121;&#046;&#108;&#097;&#119;&#115;&#111;&#110;&#064;&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#046;&#099;&#111;&#109;">&#099;&#104;&#101;&#114;&#108;&#121;&#046;&#108;&#097;&#119;&#115;&#111;&#110;&#064;&#101;&#120;&#097;&#109;&#112;&#108;&#101;&#046;&#099;&#111;&#109;</a></li>
-              </ul>
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3533.207773497743!2d85.3135479149008!3d27.67997248280329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb19caee222de7%3A0xb46b3c36b69b5885!2z4KSmIOCkrOClh-CkleCksOClgCDgpJXgpY3gpK_gpL7gpKvgpYc!5e0!3m2!1sne!2snp!4v1616685876155!5m2!1sne!2snp" width="100%" height="230" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+                
+              </div>
+              <div class="accepted-block text-center pt-1">
+                <h3 class="mb-4">We Accepts</h3>
+                <ul class="payments d-flex flex-wrap align-items-center justify-content-center listreset">
+                  <li><a href="#">
+										<img src="images/ime-pay.png" alt="ime pay">
+									</a></li>
+                  <li><a href="#">
+										<img src="images/khalti.png" alt="Khalti">
+									</a></li>
+                  <li><a href="#">
+										<img src="images/ipay.png" alt="iay">
+									</a></li>
+                  <li><a href="#">
+										<img src="images/prabhu.png" alt="prabhu">
+									</a></li>
+                  <li><a href="#">
+										<img src="images/esewa.png" alt="esewa">
+									</a></li>
+                </ul>
+              </div>
+            </aside>
           </div>
         </div>
       </section>
-      <!-- contact section end -->
+      <!-- checkout section end -->
 		</main>
 		<!-- footer of the page -->
 		<footer class="footer bg-secondary text-white pt-12 pt-md-19">

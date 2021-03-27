@@ -11,9 +11,9 @@ $gray-100: #F4F3F3 !default;
 $gray-200: #848484 !default;
 $gray-300: #C4C4C4 !default;
 $gray-400: #E5E5E5 !default;
-$gray-500: #adb5bd !default;
+$gray-500: #F8F9FA !default;
 $gray-600: #6c757d !default;
-$gray-700: #495057 !default;
+$gray-700: #212529 !default;
 $gray-800: #2b2b2b !default;
 $gray-900: #0A223D !default;
 $black:    #000 !default;
@@ -181,6 +181,7 @@ $spacers: map-merge(
     18: 72px,
     19: 76px,
     20: 80px,
+    21: 84px,
     22: 88,
     25: 100px,
   ),
@@ -235,7 +236,7 @@ $paragraph-margin-bottom:   1rem !default;
 
 $grid-breakpoints: (
   xs: 0,
-  sm: 576px,
+  sm: 480px,
   md: 768px,
   lg: 992px,
   xl: 1200px
@@ -284,7 +285,7 @@ $border-radius-sm:            .2rem !default;
 
 $rounded-pill:                50rem !default;
 
-$box-shadow-sm:               0 .125rem .25rem rgba($black, .075) !default;
+$box-shadow-sm:               0 0 4px 0 rgba($black,.15) !default;
 $box-shadow:                  0 .5rem 1rem rgba($black, .15) !default;
 $box-shadow-lg:               0px 4px 4px rgba(0, 0, 0, 0.1) !default;
 
