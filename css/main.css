@@ -751,6 +751,11 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	border-radius: 100px;
 	right: -9px;
 	top: -4px;
+	width: 20px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	padding: 0;
 }
 
 .header .login-signup-holder {
