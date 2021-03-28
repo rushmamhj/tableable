@@ -52,6 +52,9 @@ $media-expressions: (
 /* cart page */
 @import 'components/cartSection';
 
+/* article details page */
+@import 'components/articleDetails';
+
 @import 'layout/footer';
 
 body {

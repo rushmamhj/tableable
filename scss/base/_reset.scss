@@ -22,7 +22,7 @@ a{
 }
 
 p {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
 
   &:only-child,
   &:last-child {
@@ -142,8 +142,12 @@ img {
   @include font(14px,18px);
 }
 
-text-lg {
+.text-lg {
   @include font(18px,20px);
+}
+
+.text-black {
+  color: $black;
 }
 
 .hover-primary {

@@ -1,6 +1,12 @@
 .article-listing {
   margin-bottom: -32px;
 
+  &.three-col {
+    .img-holder {
+      padding-top: 112%;
+    }
+  }
+
   .img-holder {
     padding-top: 98%;
 
@@ -31,6 +37,22 @@
 }
 
 .main-event {
+  &.single-article {
+    .img-holder {
+      padding-top: 44%;
+    }
+
+    .info {
+      li {
+        margin-bottom: 0;
+      }
+      
+      .icon {
+        top: 5px;
+        left: -2px;
+      }
+    }
+  }
   .img-holder {
     padding-top: 98%;
 
