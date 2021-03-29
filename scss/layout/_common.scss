@@ -51,7 +51,6 @@
     margin: 0;
     padding: 25px 0;
     color: #212529;
-    text-shadow: 0 4px 4px rgba(#000,.25);
   }
 }
 
@@ -86,4 +85,37 @@ h2 {
 
 .badge {
   padding: 7px 10px;
+}
+
+.zoomImg {
+  width: 150% !important;
+  height: 150% !important;
+  position: absolute !important;
+
+  img {
+    width: 100%;
+  }
+}
+
+.ratings {
+  a {
+    display: block;
+    line-height: 0;
+  }
+  svg {
+    vertical-align: top;
+  }
+}
+
+.icon-zoom {
+  @include size(40px,40px);
+  background: rgba(#EAEAEA,.75);
+  top: 17px;
+  right: 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+
 }

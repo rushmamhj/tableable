@@ -105,6 +105,37 @@
       }
     }
   }
+
+  &.jcf-select-time {
+    color: $gray-200;
+    border: 1px solid $gray-400;
+    background: #F8FAFC;
+    border-radius: 8px;
+    height: 48px;
+
+    .jcf-select-text {
+      margin: 0 60px 0 48px;
+      @include font(14px,46px);
+    }
+
+    .jcf-select-opener {
+      background: transparent;
+      width: 35px;
+
+      &::before {
+        @include size(23px,11px);
+        content: '';
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);background-image: url("data:image/svg+xml,%3Csvg width='24' height='12' viewBox='0 0 24 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M23.6667 1.95024C23.6676 2.19923 23.6126 2.44524 23.5059 2.67021C23.3992 2.89517 23.2434 3.09337 23.05 3.25023L13.0501 11.3002C12.7518 11.5454 12.3778 11.6794 11.9917 11.6794C11.6057 11.6794 11.2316 11.5454 10.9334 11.3002L0.933386 2.9669C0.593025 2.684 0.378984 2.27749 0.338351 1.83678C0.297718 1.39607 0.433821 0.957264 0.716719 0.616902C0.999616 0.276542 1.40614 0.0625019 1.84685 0.0218686C2.28756 -0.0187646 2.72636 0.117338 3.06672 0.400236L12.0001 7.85024L20.9334 0.650236C21.178 0.446431 21.4759 0.316969 21.7918 0.277169C22.1078 0.23737 22.4285 0.288898 22.716 0.425658C23.0036 0.562418 23.2459 0.778685 23.4144 1.04887C23.5829 1.31905 23.6704 1.63185 23.6667 1.95024Z' fill='%23848484'/%3E%3C/svg%3E%0A");
+      }
+    }
+
+    .jcf-list .jcf-option {
+      height: auto !important;
+    }
+  }
 }
 
 .jcf-select select {
@@ -191,6 +222,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
   list-style: none;
   padding: 0;
   margin: 0;
+  border: 1px solid $gray-200;
 }
 
 .jcf-list ul li {
@@ -208,7 +240,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
   display: block;
   padding: 5px 9px;
   color: #656565;
-  height: 1%;
+  height: auto !important;
 
   img {
     margin-right: 10px;
@@ -222,7 +254,7 @@ body>.jcf-select-drop.jcf-drop-flipped {
 
 .jcf-select-drop .jcf-hover,
 .jcf-list-box .jcf-selected {
-  background: lighten($secondary, 30%);
+  background: $primary;
   color: $white;
 }
 

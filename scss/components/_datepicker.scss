@@ -1,0 +1,10 @@
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+  border-color: $primary;
+  background: $primary;
+}
+
+.ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+  background: lighten($primary,30%);
+  color: $white;
+  border-color: lighten($primary,30%);
+}

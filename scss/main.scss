@@ -35,6 +35,7 @@ $media-expressions: (
 
 @import 'plugins/jcf';
 @import 'plugins/slick';
+@import 'plugins/datepicker';
 
 @import 'layout/header';
 @import 'layout/common';
@@ -54,6 +55,8 @@ $media-expressions: (
 
 /* article details page */
 @import 'components/articleDetails';
+@import 'components/modal';
+@import 'components/datepicker';
 
 @import 'layout/footer';
 

@@ -1,0 +1,134 @@
+.modal {
+  h3 {
+    @include font(24px,28px);
+    color: $gray-600;
+    margin-bottom: 13px;
+  }
+  .ratings {
+    li {
+      padding: 0 7px 0 0 ​!important;
+    }
+  }
+
+  .close-modal {
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+    padding: 0;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    border: 0;
+
+    path {
+      transition: fill .3s;
+    }
+
+    &:hover {
+      path {
+        fill: $primary;
+      }
+    }
+  }
+}
+
+.pricing {
+  .new {
+    @include font(26px,1);
+    font-weight: bold;
+    color: #484C51;
+  }
+
+  .old {
+    color: #DB2C27;
+  }
+}
+
+.facilities-list {
+  color: $black;
+
+  .icon {
+    width: 28px;
+    text-align: center;
+  }
+}
+
+.bookingdate-form {
+  label {
+    @include font(18px,24px);
+    font-weight: 600;
+    color: #6d6d6d;
+  }
+
+  .icon {
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    left: 18px;
+  }
+
+  input[type="text"],
+  input[type="date"] {
+    color: $gray-200;
+    @include font(14px,20px);
+    padding: 12px 20px 12px 48px;
+    border: 1px solid $gray-400;
+    background: #F8FAFC;
+    border-radius: 8px;
+    width: 100%;
+    display: block;
+  }
+
+  .btn.btn-primary {
+    min-width: 220px;
+    padding: 9px 15px !important;
+    text-transform: capitalize;
+  }
+}
+
+.carousel {
+  padding-bottom: 144px;
+
+  @include media-breakpoint-up(md) {
+    padding-bottom: 174px;
+  }
+
+  .carousel-control-prev,
+  .carousel-control-next {
+    opacity: 1 !important;
+    width: auto;
+    height: auto;
+    top: calc(50% - 72px);
+    transform: translateY(-50%);
+    bottom: auto;
+
+    @include media-breakpoint-up(md) {
+      top: calc(50% - 87px);
+    }
+  }
+
+  .carousel-dots {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 -4px;
+
+    li {
+      width: 33.33%;
+      position: relative;
+      height: 120px;
+
+      @include media-breakpoint-up(md) {
+        height: 160px;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+    }
+  }
+}

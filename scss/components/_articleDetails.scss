@@ -362,7 +362,19 @@
 }
 
 .room-slider {
-  .slick-slide {
-    height: auto;
+  .item {
+    height: 388px;
+    width: 100%;
   }
+}
+
+.slider-nav {
+  .item {
+    height: 160px;
+    width: 33.33%;
+  }
+}
+
+.modal-lg {
+  max-width: 1134px;
 }
