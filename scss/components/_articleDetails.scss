@@ -11,17 +11,29 @@
   }
 }
 
+.sticky-wrap-menu {
+  margin-bottom: 28px;
+}
+
 .menu {
   line-height: 18px;
   right: 0;
   width: 100%;
+  overflow-x: auto;
 
   @include media-breakpoint-up(md) {
     border-bottom: 2px solid $gray-300;
+    overflow: visible;
   }
 
   @include media-breakpoint-up(xl) {
     margin-right: -48px;
+  }
+
+  .menu-holder {
+    @include media-breakpoint-down(sm) {
+      min-width: 545px;
+    }
   }
 
   li {

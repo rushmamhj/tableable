@@ -3199,10 +3199,15 @@ h2.line {
 	color: #000;
 }
 
+.sticky-wrap-menu {
+	margin-bottom: 28px;
+}
+
 .menu {
 	line-height: 18px;
 	right: 0;
 	width: 100%;
+	overflow-x: auto;
 }
 
 .menu li {
@@ -3880,6 +3885,7 @@ body {
 
 	.menu {
 		border-bottom: 2px solid #c4c4c4;
+		overflow: visible;
 	}
 
 	.menu li {
@@ -3997,6 +4003,12 @@ body {
 
 	.menu {
 		margin-right: -48px;
+	}
+}
+
+@media (max-width: 767.98px) {
+	.menu .menu-holder {
+		min-width: 545px;
 	}
 }
 
