@@ -36,6 +36,8 @@ $media-expressions: (
 @import 'plugins/jcf';
 @import 'plugins/slick';
 @import 'plugins/datepicker';
+@import 'plugins/fancybox';
+@import 'plugins/timepicker';
 
 @import 'layout/header';
 @import 'layout/common';
@@ -46,6 +48,7 @@ $media-expressions: (
 @import 'components/featuresSection';
 @import 'components/specialMenu';
 @import 'components/articleListing';
+@import 'components/lightbox';
 
 /* Contact */
 @import 'components/contact-section';

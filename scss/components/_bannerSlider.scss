@@ -1,5 +1,5 @@
 .banner {
-  min-height: 525px;
+  height: 525px;
   display: flex !important;
 
   &:before {
@@ -34,6 +34,16 @@
 
     @include media-breakpoint-up(md) {
       @include font(58px,62px);
+    }
+  }
+}
+
+.banner-inner {
+  .banner {
+    min-height: 320px !important;
+
+    &:after {
+      height: 320px !important;
     }
   }
 }

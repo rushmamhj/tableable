@@ -30,12 +30,6 @@
     margin-right: -48px;
   }
 
-  .menu-holder {
-    @include media-breakpoint-down(sm) {
-      min-width: 545px;
-    }
-  }
-
   li {
     border-bottom: 2px solid $gray-300;
 
@@ -162,7 +156,7 @@
 
 .gallery {
   @include media-breakpoint-up(md) {
-    margin: 0 -2px;
+    margin: 0 -1px;
   }
   .img-holder {
     padding-top: 89%;
@@ -313,6 +307,49 @@
     font-size: 24px;
     font-weight: bold;
     line-height: 28px;
+  }
+}
+
+.default-slider {
+  .slide {
+    height: auto;
+  }
+
+  .slick-arrow {
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: 0;
+    padding: 0;
+    
+    svg {
+      path {
+        transition: fill .3s;
+      }
+    }
+
+    &.slick-prev {
+      left: 11px;
+    }
+    &.slick-next  {
+      right: 11px;
+    }
+
+    &:hover {
+      svg {
+        path {
+          fill: $primary;
+        }
+      }
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: none;
+      border: 0;
+    }
   }
 }
 
