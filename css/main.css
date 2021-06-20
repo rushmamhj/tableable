@@ -5408,11 +5408,11 @@ body {
 
 @media (min-width: 1200px) {
 	.header .navbar-brand {
-		width: 239px;
+		width: 200px;
 	}
 
 	.header .nav-holder {
-		width: calc(100% - 239px);
+		width: calc(100% - 200px);
 	}
 
 	.search-dropdown {

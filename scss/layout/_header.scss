@@ -45,7 +45,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      width: 239px;
+      width: 200px;
     }
 
     img {
@@ -62,7 +62,7 @@
     }
 
     @include media-breakpoint-up(xl) {
-      width: calc(100% - 239px);
+      width: calc(100% - 200px);
     }
   }
 
