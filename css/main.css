@@ -379,7 +379,7 @@ img {
 body > .jcf-select-drop {
 	position: absolute;
 	margin: -1px 0 0;
-	z-index: 8;
+	z-index: 9;
 }
 
 body > .jcf-select-drop.jcf-drop-flipped {
@@ -3813,6 +3813,7 @@ h2.line {
 	border-radius: 8px;
 	overflow: hidden;
 	margin-top: 2px !important;
+	z-index: 8;
 }
 
 .jcf-select-drop.jcf-select-search-select .jcf-list ul {

@@ -239,6 +239,7 @@
   border-radius: 8px;
   overflow: hidden;
   margin-top: 2px !important;
+  z-index: 8;
 
   @include media-breakpoint-up(md) {
     margin-top: 26px !important;
