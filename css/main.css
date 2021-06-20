@@ -395,6 +395,10 @@ body > .jcf-select-drop.jcf-drop-flipped {
 	right: -1px;
 }
 
+.jcf-select-drop.jcf-select-time {
+	z-index: 9999;
+}
+
 .jcf-select .jcf-drop-flipped {
 	bottom: 100%;
 	top: auto;
