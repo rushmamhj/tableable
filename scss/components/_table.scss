@@ -6,6 +6,19 @@
       color: $red;
     }
   }
+  thead {
+    td {
+      padding: 19px 18px;
+      text-align: left;
+      font-weight: bold;
+      font-size: 16px;
+      line-height: 22px;
+
+      &:first-child {
+        font-size: 20px;
+      }
+    }
+  }
   @media(max-width: 767px) {
     thead {
       display: none;
@@ -65,10 +78,11 @@
     }
 
     td {
-      padding: 18px;
+      padding: 21px 18px;
     }
 
     tbody {
+      padding: 0 0 19px;
       tr {
         &:nth-child(2n+2) {
           background: $gray-99;
@@ -76,4 +90,10 @@
       }
     }
   }
+}
+
+.total-order-desc {
+  font-size: 14px;
+  line-height: 19px;
+  color: $black;
 }

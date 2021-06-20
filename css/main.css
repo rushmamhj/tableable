@@ -4950,6 +4950,24 @@ h2.line {
 	color: #ec1f46;
 }
 
+.adaptive-table thead td {
+	padding: 19px 18px;
+	text-align: left;
+	font-weight: bold;
+	font-size: 16px;
+	line-height: 22px;
+}
+
+.adaptive-table thead td:first-child {
+	font-size: 20px;
+}
+
+.total-order-desc {
+	font-size: 14px;
+	line-height: 19px;
+	color: #000;
+}
+
 .side-nav {
 	box-shadow: 0 0 4px rgba(0, 0, 0, .15);
 	border-radius: 5px;
@@ -4977,7 +4995,7 @@ h2.line {
 
 .side-nav ul a {
 	color: #000;
-	padding: 15px 0;
+	padding: 19px 0;
 	display: block;
 }
 
@@ -4989,6 +5007,12 @@ h2.line {
 .side-nav ul a:hover,
 .side-nav ul a.active {
 	color: #ec1f46;
+}
+
+.side-nav .btn.btn-primary {
+	padding: 9px ​15px !important;
+	border-radius: 0;
+	text-transform: none;
 }
 
 /* post section styles page */
@@ -5005,6 +5029,68 @@ h2.line {
 
 .author-desc a:hover {
 	color: #ec1f46;
+}
+
+/* myprofile styles page */
+
+.account-settings .user-profile {
+	margin: 0 0 1rem 0;
+	padding-bottom: 1rem;
+	text-align: center;
+}
+
+.account-settings .user-profile .user-avatar {
+	margin: 0 0 1rem 0;
+}
+
+.account-settings .user-profile .user-avatar img {
+	width: 90px;
+	height: 90px;
+	border-radius: 100px;
+}
+
+.account-settings .user-profile h5.user-name {
+	margin: 0 0 .5rem 0;
+}
+
+.account-settings .user-profile h6.user-email {
+	margin: 0;
+	font-size: .8rem;
+	font-weight: 400;
+	color: #9fa8b9;
+}
+
+.account-settings .about {
+	margin: 2rem 0 0 0;
+	text-align: center;
+}
+
+.account-settings .about h5 {
+	margin: 0 0 15px 0;
+	color: #007ae1;
+}
+
+.account-settings .about p {
+	font-size: .825rem;
+}
+
+.account-settings .form-control {
+	border: 1px solid #cfd1d8;
+	border-radius: 2px;
+	font-size: .825rem;
+	background: #fff;
+	color: #2e323c;
+}
+
+.card {
+	background: #fff;
+	border-radius: 5px;
+	border: 0;
+	margin-bottom: 1rem;
+}
+
+.section-gray-bg {
+	background: #f5f6fa;
 }
 
 /* footer styles page */
@@ -5261,7 +5347,11 @@ body {
 	}
 
 	.adaptive-table td {
-		padding: 18px;
+		padding: 21px 18px;
+	}
+
+	.adaptive-table tbody {
+		padding: 0 0 19px;
 	}
 
 	.adaptive-table tbody tr:nth-child(2n+2) {
